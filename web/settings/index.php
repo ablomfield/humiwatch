@@ -310,7 +310,10 @@ table.hwtable tr td.delete {
     </tr>    
     <tr>
         <td class="whitecell">Status</td>
-        <td class="whitecell"><?php echo $talertstat1; ?></td>
+        <td class="whitecell">
+        Temperature - <?php echo $talertstat1; ?><br>
+        Humidity - <?php echo $halertstat1; ?><br>
+        </td>
     </tr>    
     <tr>
         <td class="whitecell">Alert Interval (s)</td>
