@@ -311,8 +311,12 @@ table.hwtable tr td.delete {
     <tr>
         <td class="whitecell">Status</td>
         <td class="whitecell">
-        Temperature - <?php echo $talertstat1; ?><br>
-        Humidity - <?php echo $halertstat1; ?><br>
+            <table width="100%">
+                <tr>
+                    <td><img src="../icon-temp.png"></td><td><?php echo $talertstat1; ?></td>
+                    <td><img src="../icon-hum.png"></td><td><?php echo $halertstat1; ?></td>
+                </tr>
+            </table>
         </td>
     </tr>    
     <tr>
