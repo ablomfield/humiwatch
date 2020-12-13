@@ -339,7 +339,8 @@ table.hwtable tr td.delete {
                         echo round($realt1,1) . "°" . $tempunits . "<br>";
                         if ($talertstat1 == 1) {
                             echo "<small><font color='red'>In alert since " . $talerttime1 . ".<br>";
-                            echo "Next alert at " . $talertnext1 . " ().</small>";
+                            $interval = $talertnext1->diff($now());
+                            echo "Next alert at " . $talertnext1 . " (" . $interval->h . ":" . $interval->i . ").</small>";
                         } else {
                             echo "<small>Not in alert since " . $talerttime1 . ".</small>";
                         }
@@ -352,8 +353,8 @@ table.hwtable tr td.delete {
                         echo round($realh1,1) . "%<br>";
                         if ($halertstat1 == 1) {
                             echo "<small><font color='red'>In alert since " . $halerttime1 . ".<br>";
-                            $interval = $talertnext1->diff($now());
-                            echo "Next alert at " . $talertnext1 . " (" . $interval->h . ":" . $interval->i . ").</small>";
+                            $interval = $halertnext1->diff($now());
+                            echo "Next alert at " . $halertnext1 . " (" . $interval->h . ":" . $interval->i . ").</small>";
                         } else {
                             echo "<small>Not in alert since " . $halerttime1 . ".</small>";
                         }
