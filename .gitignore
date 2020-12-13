@@ -1,0 +1,4 @@
+*.pid
+settings.yaml
+web/oled.png
+__pycache__/
