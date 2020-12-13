@@ -332,9 +332,9 @@ table.hwtable tr td.delete {
                     <td class="whitecell"><?php
                         echo $realt1 . "°" . $tempunits . "<br>";
                         if ($talertstat1 == 1) {
-                            echo "<font color='red'>In alert since " . $talerttime1 . ".";
+                            echo "<small><font color='red'>In alert since " . $talerttime1 . ".</small>";
                         } else {
-                            echo "Not in alert since " . $talerttime1 . ".";
+                            echo "<small>Not in alert since " . $talerttime1 . ".</small>";
                         }
                     ?>
                     </td>
@@ -344,9 +344,9 @@ table.hwtable tr td.delete {
                     <td class="whitecell"><?php
                         echo $realh1 . "%<br>";
                         if ($halertstat1 == 1) {
-                            echo "<font color='red'>In alert since " . $halerttime1 . ".";
+                            echo "<small><font color='red'>In alert since " . $halerttime1 . ".</small>";
                         } else {
-                            echo "Not in alert since " . $halerttime1 . ".";
+                            echo "<small>Not in alert since " . $halerttime1 . ".</small>";
                         }
                     ?>
                     </td>
