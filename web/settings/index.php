@@ -336,7 +336,7 @@ table.hwtable tr td.delete {
                 <tr>
                     <td width="40px" class="whitecell"><img src="../icon-temp.png" width="32px"></td>
                     <td class="whitecell"><?php
-                        echo $realt1 . "°" . $tempunits . "<br>";
+                        echo round($realt1,1) . "°" . $tempunits . "<br>";
                         if ($talertstat1 == 1) {
                             echo "<small><font color='red'>In alert since " . $talerttime1 . ".<br>";
                             echo "Next alert at " . $talertnext1 . " ().</small>";
@@ -349,7 +349,7 @@ table.hwtable tr td.delete {
                 <tr>
                     <td width="40px" class="whitecell"><img src="../icon-hum.png" width="32px"></td>
                     <td class="whitecell"><?php
-                        echo $realh1 . "%<br>";
+                        echo round($realh1,1) . "%<br>";
                         if ($halertstat1 == 1) {
                             echo "<small><font color='red'>In alert since " . $halerttime1 . ".<br>";
                             echo "Next alert at " . $talertnext1 . " ().</small>";
