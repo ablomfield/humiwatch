@@ -139,6 +139,12 @@ $enabled2 = $senarray['2']['enabled'];
 $display0 = $senarray['0']['display'];
 $display1 = $senarray['1']['display'];
 $display2 = $senarray['2']['display'];
+$realt0 = $senarray['0']['realt'];
+$realt1 = $senarray['1']['realt'];
+$realt2 = $senarray['2']['realt'];
+$realh0 = $senarray['0']['realh'];
+$realh1 = $senarray['1']['realh'];
+$realh2 = $senarray['2']['realh'];
 $alert0 = $senarray['0']['alert'];
 $alert1 = $senarray['1']['alert'];
 $alert2 = $senarray['2']['alert'];
@@ -146,11 +152,17 @@ $alertint0 = $senarray['0']['alertint'];
 $alertint1 = $senarray['1']['alertint'];
 $alertint2 = $senarray['2']['alertint'];
 $talertstat0 = $senarray['0']['talertstat'];
-$talertstat1 = $senarray['0']['talertstat'];
-$talertstat2 = $senarray['0']['talertstat'];
+$talertstat1 = $senarray['1']['talertstat'];
+$talertstat2 = $senarray['2']['talertstat'];
 $halertstat0 = $senarray['0']['halertstat'];
-$halertstat1 = $senarray['0']['halertstat'];
-$halertstat2 = $senarray['0']['halertstat'];
+$halertstat1 = $senarray['1']['halertstat'];
+$halertstat2 = $senarray['2']['halertstat'];
+$talerttime0 = $senarray['0']['talerttime'];
+$talerttime1 = $senarray['1']['talerttime'];
+$talerttime2 = $senarray['2']['talerttime'];
+$halerttime0 = $senarray['0']['halerttime'];
+$halerttime1 = $senarray['1']['halerttime'];
+$halerttime2 = $senarray['2']['halerttime'];
 $tmin0 = $senarray['0']['tmin'];
 $tmax0 = $senarray['0']['tmax'];
 $hmin0 = $senarray['0']['hmin'];
@@ -171,6 +183,9 @@ if ($tempunits == "F") {
     $tmax1 = round($tmax1 * 1.8 + 32,1);
     $tmin2 = round($tmin2 * 1.8 + 32,1);
     $tmax2 = round($tmax2 * 1.8 + 32,1);
+    $realt0 = round($realt0 * 1.8 + 32,1);
+    $realt1 = round($realt1 * 1.8 + 32,1);
+    $realt2 = round($realt2 * 1.8 + 32,1);
 }
 ?>
 <!DOCTYPE html>
@@ -314,11 +329,11 @@ table.hwtable tr td.delete {
             <table width="100%">
                 <tr>
                     <td width="40px" class="whitecell"><img src="../icon-temp.png" width="32px"></td>
-                    <td class="whitecell"><?php echo $talertstat1; ?></td>
+                    <td class="whitecell"><?php echo $realt1 . "°" . $tempunits; ?></td>
                 </tr>
                 <tr>
                     <td width="40px" class="whitecell"><img src="../icon-hum.png" width="32px"></td>
-                    <td class="whitecell"><?php echo $halertstat1; ?></td>
+                    <td class="whitecell"><?php echo $realh1 . "%"; ?></td>
                 </tr>
             </table>
         </td>
