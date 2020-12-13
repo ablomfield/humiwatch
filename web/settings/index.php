@@ -313,10 +313,12 @@ table.hwtable tr td.delete {
         <td class="whitecell">
             <table width="100%">
                 <tr>
-                    <td width="40px"><img src="../icon-temp.png" width="32px"></td><td><?php echo $talertstat1; ?></td>
+                    <td width="40px" class="whitecell"><img src="../icon-temp.png" width="32px"></td>
+                    <td class="whitecell"><?php echo $talertstat1; ?></td>
                 </tr>
                 <tr>
-                    <td width="40px"><img src="../icon-hum.png" width="32px"></td><td><?php echo $halertstat1; ?></td>
+                    <td width="40px" class="whitecell"><img src="../icon-hum.png" width="32px"></td>
+                    <td class="whitecell"><?php echo $halertstat1; ?></td>
                 </tr>
             </table>
         </td>
