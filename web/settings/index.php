@@ -163,6 +163,12 @@ $talerttime2 = $senarray['2']['talerttime'];
 $halerttime0 = $senarray['0']['halerttime'];
 $halerttime1 = $senarray['1']['halerttime'];
 $halerttime2 = $senarray['2']['halerttime'];
+$talertnext0 = $senarray['0']['talertnext'];
+$talertnext1 = $senarray['1']['talertnext'];
+$talertnext2 = $senarray['2']['talertnext'];
+$halertnext0 = $senarray['0']['halertnext'];
+$halertnext1 = $senarray['1']['halertnext'];
+$halertnext2 = $senarray['2']['halertnext'];
 $tmin0 = $senarray['0']['tmin'];
 $tmax0 = $senarray['0']['tmax'];
 $hmin0 = $senarray['0']['hmin'];
@@ -332,7 +338,8 @@ table.hwtable tr td.delete {
                     <td class="whitecell"><?php
                         echo $realt1 . "°" . $tempunits . "<br>";
                         if ($talertstat1 == 1) {
-                            echo "<small><font color='red'>In alert since " . $talerttime1 . ".</small>";
+                            echo "<small><font color='red'>In alert since " . $talerttime1 . ".<br>";
+                            echo "Next alert at " . $talertnext1 . " ().</small>"
                         } else {
                             echo "<small>Not in alert since " . $talerttime1 . ".</small>";
                         }
@@ -353,7 +360,7 @@ table.hwtable tr td.delete {
                 </tr>
             </table>
         </td>
-    </tr>    
+    </tr>
     <tr>
         <td class="whitecell">Alert Interval (s)</td>
         <td class="whitecell"><input type="text" name="alertint1" value="<?php echo $alertint1; ?>"></td>
