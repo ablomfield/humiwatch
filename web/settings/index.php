@@ -336,12 +336,20 @@ table.hwtable tr td.delete {
                         } else {
                             echo "Not in alert since " . $talerttime1 . ".";
                         }
-                    ?>    
+                    ?>
                     </td>
                 </tr>
                 <tr>
                     <td width="40px" class="whitecell"><img src="../icon-hum.png" width="32px"></td>
-                    <td class="whitecell"><?php echo $realh1 . "%"; ?></td>
+                    <td class="whitecell"><?php
+                        echo $realh1 . "%<br>";
+                        if ($halertstat1 == 1) {
+                            echo "<font color='red'>In alert since " . $halerttime1 . ".";
+                        } else {
+                            echo "Not in alert since " . $halerttime1 . ".";
+                        }
+                    ?>
+                    </td>
                 </tr>
             </table>
         </td>
