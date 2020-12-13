@@ -145,6 +145,12 @@ $alert2 = $senarray['2']['alert'];
 $alertint0 = $senarray['0']['alertint'];
 $alertint1 = $senarray['1']['alertint'];
 $alertint2 = $senarray['2']['alertint'];
+$talertstat0 = $senarray['0']['talertstat'];
+$talertstat1 = $senarray['0']['talertstat'];
+$talertstat2 = $senarray['0']['talertstat'];
+$halertstat0 = $senarray['0']['halertstat'];
+$halertstat1 = $senarray['0']['halertstat'];
+$halertstat2 = $senarray['0']['halertstat'];
 $tmin0 = $senarray['0']['tmin'];
 $tmax0 = $senarray['0']['tmax'];
 $hmin0 = $senarray['0']['hmin'];
@@ -301,6 +307,10 @@ table.hwtable tr td.delete {
     <tr>
         <td class="whitecell">Alert</td>
         <td class="whitecell"><input type="checkbox" name="alert1" value="1"<?php if ($alert1 == 1) {echo(" checked");}?>></td>
+    </tr>    
+    <tr>
+        <td class="whitecell">Status</td>
+        <td class="whitecell"><?php echo $talertstat1; ?></td>
     </tr>    
     <tr>
         <td class="whitecell">Alert Interval (s)</td>
