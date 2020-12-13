@@ -352,7 +352,7 @@ table.hwtable tr td.delete {
                         echo round($realh1,1) . "%<br>";
                         if ($halertstat1 == 1) {
                             echo "<small><font color='red'>In alert since " . $halerttime1 . ".<br>";
-                            echo "Next alert at " . $talertnext1 . " ().</small>";
+                            echo "Next alert at " . $talertnext1 . " (" . $talertnext1->diff(now()) . ").</small>";
                         } else {
                             echo "<small>Not in alert since " . $halerttime1 . ".</small>";
                         }
