@@ -148,7 +148,7 @@ try:
                     po.send(msg)
             else:
                 strTCol = "GREEN"
-                if alert == 1 and talertstat == 1:
+                if alert == 1 and talertstat == 1 and now > (talerttime + timedelta(seconds=300)):
                         DBConn = pymysql.connect(host=dbServerName, user=dbUser, password=dbPassword,db=dbName, charset=charSet,cursorclass=cusrorType)
                         objalert = DBConn.cursor()
                         objalert.execute("UPDATE sensors SET talertstat = '0', talertval = '0', talerttime = '" + str(now) + "', talertnext = '" + str(now) + "' WHERE sensorid ='1'")
@@ -172,7 +172,7 @@ try:
                     po.send(msg)
             else:
                 strHCol = "GREEN"
-                if alert == 1 and halertstat == 1:
+                if alert == 1 and halertstat == 1 and now > (halerttime + timedelta(seconds=300)):
                         DBConn = pymysql.connect(host=dbServerName, user=dbUser, password=dbPassword,db=dbName, charset=charSet,cursorclass=cusrorType)
                         objalert = DBConn.cursor()
                         objalert.execute("UPDATE sensors SET halertstat = '0', halertval = '0', halerttime = '" + str(now) + "', halertnext = '" + str(now) + "' WHERE sensorid ='1'")
@@ -250,7 +250,7 @@ try:
                     po.send(msg)
             else:
                 strTCol = "GREEN"
-                if alert == 1 and talertstat == 1:
+                if alert == 1 and talertstat == 1 and now > (talerttime + timedelta(seconds=300)):
                         DBConn = pymysql.connect(host=dbServerName, user=dbUser, password=dbPassword,db=dbName, charset=charSet,cursorclass=cusrorType)
                         objalert = DBConn.cursor()
                         objalert.execute("UPDATE sensors SET talertstat = '0', talertval = '0', talerttime = '" + str(now) + "', talertnext = '" + str(now) + "' WHERE sensorid ='2'")
@@ -274,7 +274,7 @@ try:
                     po.send(msg)
             else:
                 strHCol = "GREEN"
-                if alert == 1 and halertstat == 1:
+                if alert == 1 and halertstat == 1 and now > (halerttime + timedelta(seconds=300)):
                         DBConn = pymysql.connect(host=dbServerName, user=dbUser, password=dbPassword,db=dbName, charset=charSet,cursorclass=cusrorType)
                         objalert = DBConn.cursor()
                         objalert.execute("UPDATE sensors SET halertstat = '0', halertval = '0', halerttime = '" + str(now) + "', halertnext = '" + str(now) + "' WHERE sensorid ='2'")
@@ -353,7 +353,7 @@ try:
                     po.send(msg)
             else:
                 strTCol = "GREEN"
-                if alert == 1 and talertstat == 1:
+                if alert == 1 and talertstat == 1 and now > (talerttime + timedelta(seconds=300)):
                         DBConn = pymysql.connect(host=dbServerName, user=dbUser, password=dbPassword,db=dbName, charset=charSet,cursorclass=cusrorType)
                         objalert = DBConn.cursor()
                         objalert.execute("UPDATE sensors SET talertstat = '0', talertval = '0', talerttime = '" + str(now) + "', talertnext = '" + str(now) + "' WHERE sensorid ='0'")
@@ -377,7 +377,7 @@ try:
                     po.send(msg)
             else:
                 strHCol = "GREEN"
-                if alert == 1 and halertstat == 1:
+                if alert == 1 and halertstat == 1 and now > (halerttime + timedelta(seconds=300)):
                         DBConn = pymysql.connect(host=dbServerName, user=dbUser, password=dbPassword,db=dbName, charset=charSet,cursorclass=cusrorType)
                         objalert = DBConn.cursor()
                         objalert.execute("UPDATE sensors SET halertstat = '0', halertval = '0', halerttime = '" + str(now) + "', halertnext = '" + str(now) + "' WHERE sensorid ='0'")
