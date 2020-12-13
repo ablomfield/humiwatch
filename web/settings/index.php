@@ -339,7 +339,9 @@ table.hwtable tr td.delete {
                         echo round($realt1,1) . "°" . $tempunits . "<br>";
                         if ($talertstat1 == 1) {
                             echo "<small><font color='red'>In alert since " . $talerttime1 . ".<br>";
-                            $interval = DateTime($talertnext1)->diff(DateTime(now()));
+                            $t=time();
+                            echo($t . "<br>");
+                            echo(date("Y-m-d",$t));
                             echo "Next alert at " . $talertnext1 . " (" . $interval->h . ":" . $interval->i . ").</small>";
                         } else {
                             echo "<small>Not in alert since " . $talerttime1 . ".</small>";
