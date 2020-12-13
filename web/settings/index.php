@@ -342,7 +342,7 @@ table.hwtable tr td.delete {
                             $t=time();
                             echo($t . "<br>");
                             echo(date("Y-m-d",$t));
-                            echo "Next alert at " . $talertnext1 . " (" . $interval->h . ":" . $interval->i . ").</small>";
+                            echo "Next alert at " . $talertnext1 . " (" . ":" . ").</small>";
                         } else {
                             echo "<small>Not in alert since " . $talerttime1 . ".</small>";
                         }
