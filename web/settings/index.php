@@ -314,6 +314,8 @@ table.hwtable tr td.delete {
             <table width="100%">
                 <tr>
                     <td><img src="../icon-temp.png"></td><td><?php echo $talertstat1; ?></td>
+                </tr>
+                <tr>
                     <td><img src="../icon-hum.png"></td><td><?php echo $halertstat1; ?></td>
                 </tr>
             </table>
