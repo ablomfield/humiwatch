@@ -329,7 +329,15 @@ table.hwtable tr td.delete {
             <table width="100%">
                 <tr>
                     <td width="40px" class="whitecell"><img src="../icon-temp.png" width="32px"></td>
-                    <td class="whitecell"><?php echo $realt1 . "°" . $tempunits; ?></td>
+                    <td class="whitecell"><?php
+                        echo $realt1 . "°" . $tempunits . "<br>";
+                        if ($talertstat1 == 1) {
+                            echo "<font color='red'>In alert since " . $talerttime1 . ".";
+                        } else {
+                            echo "Not in alert since " . $talerttime1 . ".";
+                        }
+                    ?>    
+                    </td>
                 </tr>
                 <tr>
                     <td width="40px" class="whitecell"><img src="../icon-hum.png" width="32px"></td>
