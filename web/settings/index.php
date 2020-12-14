@@ -169,6 +169,12 @@ $talertnext2 = $senarray['2']['talertnext'];
 $halertnext0 = $senarray['0']['halertnext'];
 $halertnext1 = $senarray['1']['halertnext'];
 $halertnext2 = $senarray['2']['halertnext'];
+$talertval0 = $senarray['0']['talertval'];
+$talertval1 = $senarray['1']['talertval'];
+$talertval2 = $senarray['2']['talertval'];
+$halertval0 = $senarray['0']['halertval'];
+$halertval1 = $senarray['1']['halertval'];
+$halertval2 = $senarray['2']['halertval'];
 $tmin0 = $senarray['0']['tmin'];
 $tmax0 = $senarray['0']['tmax'];
 $hmin0 = $senarray['0']['hmin'];
@@ -192,6 +198,9 @@ if ($tempunits == "F") {
     $realt0 = round($realt0 * 1.8 + 32,1);
     $realt1 = round($realt1 * 1.8 + 32,1);
     $realt2 = round($realt2 * 1.8 + 32,1);
+    $talertval0 = round($talertval0* 1.8 + 32,1);
+    $talertval1 = round($talertval1 * 1.8 + 32,1);
+    $talertval1 = round($talertval2 * 1.8 + 32,1);
 }
 ?>
 <!DOCTYPE html>
@@ -339,7 +348,7 @@ table.hwtable tr td.delete {
                         echo round($realt1,1) . "°" . $tempunits . "<br>";
                         if ($talertstat1 == 1) {
                             echo "<small><font color='red'>In alert since " . $talerttime1 . ".<br>";
-                            echo "Next notification at " . $talertnext1 . " (" . ":" . ").</small>";
+                            echo "Next notification at " . $talertnext1 . ".</small>";
                         } else {
                             echo "<small>Not in alert since " . $talerttime1 . ".</small>";
                         }
@@ -351,7 +360,7 @@ table.hwtable tr td.delete {
                     <td class="whitecell"><?php
                         echo round($realh1,1) . "%<br>";
                         if ($halertstat1 == 1) {
-                            echo "<small><font color='red'>In alert since " . $halerttime1 . ".<br>";
+                            echo "<small><font color='red'>In alert (" . $halertval1 . ") since " . $halerttime1 . ".<br>";
                             $interval = $halertnext1->diff($now());
                             echo "Next alert at " . $halertnext1 . " (" . $interval->h . ":" . $interval->i . ").</small>";
                         } else {
