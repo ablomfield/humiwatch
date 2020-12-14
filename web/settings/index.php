@@ -413,7 +413,40 @@ table.hwtable tr td.delete {
     <tr>
         <td class="whitecell">Alert Interval (s)</td>
         <td class="whitecell"><input type="text" name="alertint2" value="<?php echo $alertint2; ?>"></td>
-    </tr>    
+    </tr>
+    <tr>
+        <td class="whitecell">Status</td>
+        <td class="whitecell">
+            <table width="100%">
+                <tr>
+                    <td width="40px" class="whitecell"><img src="../icon-temp.png" width="32px"></td>
+                    <td class="whitecell"><?php
+                        echo round($realt2,1) . "°" . $tempunits . "<br>";
+                        if ($talertstat2 == 1) {
+                            echo "<small><font color='red'>In alert (" . $talertval2 . ") since " . $talerttime2 . ".<br>";
+                            echo "Next notification at " . $talertnext2 . ".</small>";
+                        } else {
+                            echo "<small>Not in alert since " . $talerttime2 . ".</small>";
+                        }
+                    ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="40px" class="whitecell"><img src="../icon-hum.png" width="32px"></td>
+                    <td class="whitecell"><?php
+                        echo round($realh2,1) . "%<br>";
+                        if ($halertstat2 == 1) {
+                            echo "<small><font color='red'>In alert (" . $halertval2 . ") since " . $halerttime2 . ".<br>";
+                            echo "Next notification at " . $halertnext2 . ".</small>";
+                        } else {
+                            echo "<small>Not in alert since " . $halerttime2 . ".</small>";
+                        }
+                    ?>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>        
     <tr>
         <td class="whitecell">Min Tempature</td>
         <td class="whitecell"><input type="text" name="tmin2" value="<?php echo $tmin2; ?>"></td>
