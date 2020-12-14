@@ -364,7 +364,7 @@ table.hwtable tr td.delete {
                     <td class="whitecell"><?php
                         echo round($realh1,1) . "%<br>";
                         if ($halertstat1 == 1) {
-                            echo "<small><font color='red'>In alert (" . $halertval1 . ") since " . $halerttime1 . ".<br>";
+                            echo "<small><font color='red'>In alert (" . $halertval1 . "%) since " . $halerttime1 . ".<br>";
                             echo "Next notification at " . $halertnext1 . ".</small>";
                         } else {
                             echo "<small>Not in alert since " . $halerttime1 . ".</small>";
@@ -436,7 +436,7 @@ table.hwtable tr td.delete {
                     <td class="whitecell"><?php
                         echo round($realh2,1) . "%<br>";
                         if ($halertstat2 == 1) {
-                            echo "<small><font color='red'>In alert (" . $halertval2 . ") since " . $halerttime2 . ".<br>";
+                            echo "<small><font color='red'>In alert (" . $halertval2 . "%) since " . $halerttime2 . ".<br>";
                             echo "Next notification at " . $halertnext2 . ".</small>";
                         } else {
                             echo "<small>Not in alert since " . $halerttime2 . ".</small>";
