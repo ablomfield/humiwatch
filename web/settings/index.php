@@ -339,6 +339,10 @@ table.hwtable tr td.delete {
         <td class="whitecell"><input type="checkbox" name="alert1" value="1"<?php if ($alert1 == 1) {echo(" checked");}?>></td>
     </tr>    
     <tr>
+        <td class="whitecell">Alert Interval (s)</td>
+        <td class="whitecell"><input type="text" name="alertint1" value="<?php echo $alertint1; ?>"></td>
+    </tr>
+    <tr>
         <td class="whitecell">Status</td>
         <td class="whitecell">
             <table width="100%">
@@ -347,7 +351,7 @@ table.hwtable tr td.delete {
                     <td class="whitecell"><?php
                         echo round($realt1,1) . "°" . $tempunits . "<br>";
                         if ($talertstat1 == 1) {
-                            echo "<small><font color='red'>In alert since " . $talerttime1 . ".<br>";
+                            echo "<small><font color='red'>In alert (" . $talertval1 . ") since " . $talerttime1 . ".<br>";
                             echo "Next notification at " . $talertnext1 . ".</small>";
                         } else {
                             echo "<small>Not in alert since " . $talerttime1 . ".</small>";
@@ -361,8 +365,7 @@ table.hwtable tr td.delete {
                         echo round($realh1,1) . "%<br>";
                         if ($halertstat1 == 1) {
                             echo "<small><font color='red'>In alert (" . $halertval1 . ") since " . $halerttime1 . ".<br>";
-                            $interval = $halertnext1->diff($now());
-                            echo "Next alert at " . $halertnext1 . " (" . $interval->h . ":" . $interval->i . ").</small>";
+                            echo "Next notification at " . $halertnext1 . ".</small>";
                         } else {
                             echo "<small>Not in alert since " . $halerttime1 . ".</small>";
                         }
@@ -371,10 +374,6 @@ table.hwtable tr td.delete {
                 </tr>
             </table>
         </td>
-    </tr>
-    <tr>
-        <td class="whitecell">Alert Interval (s)</td>
-        <td class="whitecell"><input type="text" name="alertint1" value="<?php echo $alertint1; ?>"></td>
     </tr>
     <tr>
         <td class="whitecell">Min Tempature</td>
