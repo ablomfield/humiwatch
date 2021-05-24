@@ -87,6 +87,7 @@ if ($sensor == 2 && $senarray['0']['display'] == 1) {
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="refresh" content="5;URL='?sensor=<?php echo($nextsensor); ?>'">
+        <link rel="apple-touch-icon" href="/humiwatch/apple-touch-icon.png">
         <title>HumiWatch</title>
         <style>
             @media (max-width: 999px) {
